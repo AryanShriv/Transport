@@ -38,7 +38,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="services-section">
+    <section className="services-section container">
       <h2 className="services-heading">Our Services</h2>
       <p className="services-description">
         Reliable and efficient transport solutions tailored to your needs.
