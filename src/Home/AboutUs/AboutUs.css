@@ -1,0 +1,75 @@
+/* AboutUs.css */
+.about-us-section {
+    padding: 50px;
+    background-color: #f9f9f9; /* Light grey background */
+    text-align: center;
+  }
+  
+  .about-us-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .about-us-image {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .about-us-text {
+    width: 50%;
+    max-width: 500px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #666;
+    padding: 20px;
+  }
+  
+  /* Media query for tablet screens */
+  @media (max-width: 1024px) {
+    .about-us-text {
+      font-size: 1rem; /* Slightly reduce font size */
+    }
+    
+    .about-us-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Media query for mobile screens */
+  @media (max-width: 768px) {
+    .about-us-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-us-image,
+    .about-us-text {
+      width: 100%; /* Full width for both elements */
+    }
+  
+    .about-us-text {
+      text-align: center; /* Center text on mobile */
+      padding: 10px;
+    }
+  
+    .about-us-heading {
+      font-size: 1.8rem; /* Reduce heading size for better readability on small screens */
+    }
+  
+    .about-us-text p {
+      font-size: 0.95rem; /* Adjust paragraph font size */
+    }
+  }
+  

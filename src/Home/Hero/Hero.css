@@ -1,0 +1,57 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../Assets/Hero/HeroBG.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Center vertically */
+    padding-left: 50px; /* Adjust as needed */
+    overflow: hidden; /* Ensure no overflow */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+    color: #ffffff;
+    max-width: 600px; /* Adjust as needed */
+    text-align: left;
+  }
+  
+  .hero-heading {
+    font-family: 'Poppins', sans-serif; /* Replace with preferred font */
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 20px; /* Adjust spacing */
+  }
+  
+  .hero-tagline {
+    font-family: 'Poppins', sans-serif; /* Replace with preferred font */
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: normal;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-heading {
+      font-size: 2.5rem; /* Adjust for smaller screens */
+    }
+  
+    .hero-tagline {
+      font-size: 1.2rem; /* Adjust for smaller screens */
+    }
+  
+    .hero-section {
+      padding-left: 20px; /* Reduce padding for smaller screens */
+    }
+  }
+  
