@@ -25,6 +25,7 @@
     max-width: 500px;
     height: auto;
     object-fit: cover;
+    border-radius: 7%;
   }
   
   .about-us-text {
@@ -34,6 +35,10 @@
     font-size: 1.1rem;
     color: #666;
     padding: 20px;
+  }
+
+  .aboutUsPara{
+    text-align: justify;
   }
   
   /* Media query for tablet screens */

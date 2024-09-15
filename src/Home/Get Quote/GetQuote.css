@@ -1,0 +1,102 @@
+.get-quote-section {
+    background-color: #f7f9fc; /* Soft background */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .get-quote-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff; /* White background for clean look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Light shadow for subtle depth */
+    border-radius: 12px;
+    padding: 40px;
+  }
+  
+  .quote-text {
+    width: 50%; /* Half-width for text */
+  }
+  
+  .quote-text h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #031233; /* Dark blue color for contrast */
+    margin-bottom: 20px;
+  }
+  
+  .quote-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666; /* Softer grey for the paragraph */
+  }
+  
+  .quote-form {
+    width: 50%; /* Half-width for form */
+  }
+  
+  .quote-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .quote-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #031233; /* Same dark blue for consistency */
+  }
+  
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Softer borders */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .quote-form input:focus,
+  .quote-form select:focus,
+  .quote-form textarea:focus {
+    border-color: #031233;
+    outline: none;
+  }
+  
+  .quote-form button {
+    background-color: #031233;
+    color: #ffffff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quote-form button:hover {
+    background-color: #021022; /* Darker hover effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .get-quote-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .quote-text,
+    .quote-form {
+      width: 100%; /* Full-width on smaller screens */
+    }
+    input{
+        width: 90% !important;
+    }
+  }
+  

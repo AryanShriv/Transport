@@ -1,25 +1,26 @@
-import './App.css';
-import Footer from './Components/Footer/Footer';
-import Navbar from './Components/Navbar/Navbar';
-import AboutUs from './Home/AboutUs/AboutUs';
-import FAQ from './Home/FAQ/FAQ';
-import GetQuote from './Home/Get Quote/GetQuote';
-import Hero from './Home/Hero/Hero';
-import Services from './Home/Services/Services';
-import Testimonials from './Home/Testimonials/Testimonials';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Home/Home";
+import Footer from "./Components/Footer/Footer";
+import AboutUs from "./Home/AboutUs/AboutUs";
+import GetQuote from "./Home/Get Quote/GetQuote";
+import Services from "./Home/Services/Services";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <Hero/>
-      <Services/>
-      <AboutUs/>
-      <GetQuote/>
-      <Testimonials/>
-      <FAQ/>
-      <Footer/>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/AboutUs" element={<AboutUs />}></Route>
+          <Route path="/Services" element={<Services />}></Route>
+          <Route path="/ContactUs" element={<GetQuote />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,44 +1,49 @@
 import React from 'react';
 import './Services.css'; 
 
-import TRUCK from "../../Assets/Hero/HeroBG.jpg"
+import ES from "../../Assets/Services/ES.jpg"
+import TLS from "../../Assets/Services/TLS.jpg"
+import LTL from "../../Assets/Services/LTL.jpg"
+import SDD from "../../Assets/Services/SDD.jpeg"
+import WH from "../../Assets/Services/WH.jpeg"
+import SLH from "../../Assets/Services/SLH.jpeg"
 
 const servicesData = [
   {
     title: 'Expedited Services',
     description: 'Fast and efficient deliveries on tight deadlines.',
-    imgSrc: TRUCK
+    imgSrc: ES
   },
   {
     title: 'Truck Load Services',
     description: 'Reliable full truckload services for large shipments.',
-    imgSrc: TRUCK
+    imgSrc: TLS
   },
   {
     title: 'LTL Trucking Services',
     description: 'Cost-effective solutions for smaller shipments.',
-    imgSrc: TRUCK
+    imgSrc: LTL
   },
   {
     title: 'Same Day Delivery Services',
     description: 'Delivery solutions for urgent shipments.',
-    imgSrc: TRUCK
+    imgSrc: SDD
   },
   {
     title: 'Team Driver Services',
     description: 'Non-stop long-haul services with professional team drivers.',
-    imgSrc: TRUCK
+    imgSrc: WH
   },
   {
     title: 'Short & Long Haul Services',
     description: 'Flexible transport solutions for both short and long distances.',
-    imgSrc: TRUCK
+    imgSrc: SLH
   },
 ];
 
 const Services = () => {
   return (
-    <section className="services-section container">
+    <section className="services-section">
       <h2 className="services-heading">Our Services</h2>
       <p className="services-description">
         Reliable and efficient transport solutions tailored to your needs.
