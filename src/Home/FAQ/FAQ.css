@@ -50,7 +50,7 @@
   }
   
   .faq-item.active .faq-question .arrow {
-    transform: rotate(180deg); /* Rotate arrow for expanded state */
+    transform: rotate(360deg); /* Rotate arrow for expanded state */
   }
   
   .faq-answer {

@@ -1,7 +1,37 @@
-import React from 'react';
-import './GetQuote.css'; // External CSS for styling
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './GetQuote.css';
 
 const GetQuote = () => {
+  const form = useRef();
+  const [formStatus, setFormStatus] = useState(null); // Form status
+  const [isModalVisible, setIsModalVisible] = useState(false); // Modal visibility state
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_uwwsoxd', 'template_ww364sq', form.current, {
+        publicKey: 'EfpuEaXKGXoMJJyer',
+      })
+      .then(
+        () => {
+          setFormStatus('SUCCESS'); // Set status to success
+          setIsModalVisible(true); // Show modal on success
+          form.current.reset(); // Reset the form
+        },
+        (error) => {
+          setFormStatus('FAILED'); // Set status to failed
+          setIsModalVisible(true); // Show modal on failure
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false); // Close the modal when user clicks close
+  };
+
   return (
     <section className="get-quote-section">
       <div className="get-quote-container">
@@ -12,7 +42,7 @@ const GetQuote = () => {
             Our commitment to quality is provided in many ways to our customers.
             We are proud to say that we have reliable and experienced drivers
             who ensure your product is delivered safely and professionally. We
-            at Transport hold a proactive approach when it comes to safety
+            at AZ UNITED INC Transport hold a proactive approach when it comes to safety
             and maintain a strict policy to provide the excellent service our
             customers have come to expect and trust. You can rest assured your
             product will be delivered in a safe and timely manner.
@@ -21,7 +51,7 @@ const GetQuote = () => {
 
         {/* Right Side - Form */}
         <div className="quote-form">
-          <form>
+          <form ref={form} action="" onSubmit={sendEmail}>
             <label>
               Name:
               <input type="text" name="name" required />
@@ -49,10 +79,30 @@ const GetQuote = () => {
               Message:
               <textarea name="message" rows="4"></textarea>
             </label>
-            <button type="submit">Request Quote</button>
+            <button type="submit" value="Send">Request Quote</button>
           </form>
         </div>
       </div>
+
+      {/* Confirmation Modal */}
+      {isModalVisible && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            {formStatus === 'SUCCESS' ? (
+              <div>
+                <h3>Success!</h3>
+                <p>Your request has been submitted successfully!</p>
+              </div>
+            ) : (
+              <div>
+                <h3>Error!</h3>
+                <p>There was an error submitting your request. Please try again.</p>
+              </div>
+            )}
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

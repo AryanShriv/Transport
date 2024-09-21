@@ -1,6 +1,8 @@
 import React from 'react';
 import './Services.css'; 
 
+import { Slide } from "react-awesome-reveal";
+
 import ES from "../../Assets/Services/ES.jpg"
 import TLS from "../../Assets/Services/TLS.jpg"
 import LTL from "../../Assets/Services/LTL.jpg"
@@ -44,10 +46,12 @@ const servicesData = [
 const Services = () => {
   return (
     <section className="services-section">
+      <Slide direction='down'>
       <h2 className="services-heading">Our Services</h2>
       <p className="services-description">
         Reliable and efficient transport solutions tailored to your needs.
       </p>
+      </Slide>
 
       <div className="services-grid">
         {servicesData.map((service, index) => (

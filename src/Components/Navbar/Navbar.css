@@ -17,7 +17,7 @@
   
   /* Logo */
   .logo img {
-    height: 80px; /* Adjust as needed */
+    height: 35px; /* Adjust as needed */
   }
   
   /* Navigation Links */
@@ -146,7 +146,7 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
     .navbar {
-      justify-content: center; /* Center content on mobile */
+      justify-content: space-around; /* Center content on mobile */
     }
   
     .nav-links {
@@ -158,6 +158,7 @@
       right: 0;
       background-color: #ffffff; /* White background for dropdown */
       z-index: 20;
+      text-align: center;
     }
   
     .nav-links.open {

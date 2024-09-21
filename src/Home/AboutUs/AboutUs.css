@@ -1,80 +1,98 @@
-/* AboutUs.css */
+/* About Us Section */
 .about-us-section {
-    padding: 50px;
-    background-color: #f9f9f9; /* Light grey background */
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.about-us-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-us-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-us-image {
+  width: 50%;
+  max-width: 570px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 7%;
+}
+
+.about-us-text {
+  width: 40%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.aboutUsPara {
+  margin-bottom: 20px;
+}
+
+/* Contact Details Styling */
+.contact-details {
+  display: flex;
+  flex-direction: column; /* Stack the contact details vertically */
+  gap: 10px; /* Space between contact items */
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  margin: 0; /* Remove margin for better alignment */
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+}
+
+.contact-details p strong{
+  margin-right: 2px;
+}
+
+.contact-details a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Icon Styling */
+.contact-details svg {
+  margin-right: 10px; /* Space between icon and text */
+  color: #031233; /* Customize icon color if needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    align-items: center; /* Center align for better layout */
+  }
+
+  .about-us-image {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .about-us-text {
+    width: 100%; /* Full width for text */
+  }
+
+  .about-us-heading {
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
+  }
+
+  .contact-details p{
+    flex-direction: column;
     text-align: center;
   }
   
-  .about-us-heading {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
+  .contact-details svg {
+    display: none;
   }
-  
-  .about-us-content {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .about-us-image {
-    width: 50%;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 7%;
-  }
-  
-  .about-us-text {
-    width: 50%;
-    max-width: 500px;
-    text-align: left;
-    font-size: 1.1rem;
-    color: #666;
-    padding: 20px;
-  }
-
-  .aboutUsPara{
-    text-align: justify;
-  }
-  
-  /* Media query for tablet screens */
-  @media (max-width: 1024px) {
-    .about-us-text {
-      font-size: 1rem; /* Slightly reduce font size */
-    }
-    
-    .about-us-heading {
-      font-size: 2rem;
-    }
-  }
-  
-  /* Media query for mobile screens */
-  @media (max-width: 768px) {
-    .about-us-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-us-image,
-    .about-us-text {
-      width: 100%; /* Full width for both elements */
-    }
-  
-    .about-us-text {
-      text-align: center; /* Center text on mobile */
-      padding: 10px;
-    }
-  
-    .about-us-heading {
-      font-size: 1.8rem; /* Reduce heading size for better readability on small screens */
-    }
-  
-    .about-us-text p {
-      font-size: 0.95rem; /* Adjust paragraph font size */
-    }
-  }
-  
+}

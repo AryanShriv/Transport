@@ -3,7 +3,7 @@ import './Navbar.css';
 
 import { Link } from 'react-router-dom';
 
-import Logo from "../../Assets/Logo/Logo.png"
+import Logo from "../../Assets/Logo/NLogo.jpg"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

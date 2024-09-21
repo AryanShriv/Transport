@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { Fade } from "react-awesome-reveal";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -34,6 +36,7 @@ const Testimonials = () => {
   return (
   <div className="testimonials-section">
     <h2>What our clients say</h2>
+    <Fade>
     <Swiper
         spaceBetween={30}
         pagination={false}
@@ -59,6 +62,7 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      </Fade>
     </div>
   );
 };
