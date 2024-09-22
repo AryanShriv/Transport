@@ -28,7 +28,8 @@ const Footer = () => {
         <p>
           Email: <a href="mailto:azunitedinc@hotmail.com"> azunitedinc@hotmail.com</a>
         </p>
-        <p>Phone: 905-782-0751</p>
+        <p>
+        Phone: <a href="tel:905-782-0751">905-782-0751</a></p>
       </div>
 
       <div className="footer-text">
