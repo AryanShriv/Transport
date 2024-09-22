@@ -25,9 +25,10 @@ const Footer = () => {
 
       {/* Contact Details */}
       <div className="footer-contact">
-        <p>Address: 1234 AZ Transport St., City, Country</p>
-        <p>Email: info@aztransport.com</p>
-        <p>Phone: +1 (555) 123-4567</p>
+        <p>
+          Email: <a href="mailto:azunitedinc@hotmail.com"> azunitedinc@hotmail.com</a>
+        </p>
+        <p>Phone: 905-782-0751</p>
       </div>
 
       <div className="footer-text">
