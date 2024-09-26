@@ -24,7 +24,7 @@
 }
 
 .footer-links a:hover {
-  color: #00bcd4; /* Accent color for hover effect */
+  color: #b40717; /* Accent color for hover effect */
   transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -57,7 +57,7 @@
   left: 0;
   width: 100%;
   height: 3px; /* Thickness of the line */
-  background-color: #00bcd4; /* Line color matching the hover effect */
+  background-color: #b40717; /* Line color matching the hover effect */
   transform: translateX(-100%);
   animation: slideIn 3s linear infinite;
 }

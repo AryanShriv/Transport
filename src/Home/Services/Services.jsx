@@ -47,7 +47,7 @@ const Services = () => {
   return (
     <section className="services-section">
       <Slide direction='down'>
-      <h2 className="services-heading">Our Services</h2>
+      <h2 className="services-heading">OUR SERVICES</h2>
       <p className="services-description">
         Reliable and efficient transport solutions tailored to your needs.
       </p>

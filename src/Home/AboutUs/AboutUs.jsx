@@ -12,7 +12,7 @@ const AboutUs = () => {
   return (
     <section className="about-us-section">
       <Slide direction='down'>
-      <h2 className="about-us-heading">About Us</h2>
+      <h2 className="about-us-heading">ABOUT US</h2>
       </Slide>
       <div className="about-us-content">
         <img src={About} alt="Company Image" className="about-us-image" />
