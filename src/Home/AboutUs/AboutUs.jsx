@@ -31,10 +31,6 @@ const AboutUs = () => {
           {/* Contact Information */}
           <div className="contact-details">
             <p>
-              <MdPlace />
-              <strong>Address:</strong>1234 Logistics Blvd, Transport City, TX 78910
-            </p>
-            <p>
               <IoMail />
               <strong>Email: </strong>{" "}
               <a href="mailto:azunitedinc@hotmail.com">
