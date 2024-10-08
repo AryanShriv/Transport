@@ -63,6 +63,13 @@
     }
   }
   
+  @media (min-width: 2550px) {
+    .services-section {
+      width: 1600px;
+      margin: 0 auto;
+    }
+  }
+  
   @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr; /* 1 card per row */
