@@ -11,8 +11,8 @@ import { FaPhone } from "react-icons/fa6";
 const AboutUs = () => {
   return (
     <section className="about-us-section">
-      <Slide direction='down'>
-      <h2 className="about-us-heading">ABOUT US</h2>
+      <Slide direction="down">
+        <h2 className="about-us-heading">ABOUT US</h2>
       </Slide>
       <div className="about-us-content">
         <img src={About} alt="Company Image" className="about-us-image" />
@@ -34,13 +34,13 @@ const AboutUs = () => {
               <IoMail />
               <strong>Email: </strong>{" "}
               <a href="mailto:azunitedinc@hotmail.com">
-                 azunitedinc@hotmail.com
+                azunitedinc@hotmail.com
               </a>
             </p>
             <p>
               <FaPhone />
               <strong>Phone:</strong>{" "}
-              <a href="tel:905-782-0751">905-782-0751</a>
+              <a href="tel:+13173006474">+13173006474</a>
             </p>
           </div>
         </div>
