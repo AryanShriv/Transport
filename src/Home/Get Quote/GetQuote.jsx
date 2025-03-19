@@ -1,6 +1,9 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import './GetQuote.css';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { IoMail } from "react-icons/io5";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaPhone } from "react-icons/fa6";
+import "./GetQuote.css";
 
 const GetQuote = () => {
   const form = useRef();
@@ -11,20 +14,20 @@ const GetQuote = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_uwwsoxd', 'template_ww364sq', form.current, {
-        publicKey: 'EfpuEaXKGXoMJJyer',
+      .sendForm("service_uwwsoxd", "template_ww364sq", form.current, {
+        publicKey: "EfpuEaXKGXoMJJyer",
       })
       .then(
         () => {
-          setFormStatus('SUCCESS'); // Set status to success
+          setFormStatus("SUCCESS"); // Set status to success
           setIsModalVisible(true); // Show modal on success
           form.current.reset(); // Reset the form
         },
         (error) => {
-          setFormStatus('FAILED'); // Set status to failed
+          setFormStatus("FAILED"); // Set status to failed
           setIsModalVisible(true); // Show modal on failure
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
   };
 
@@ -42,11 +45,33 @@ const GetQuote = () => {
             Our commitment to quality is provided in many ways to our customers.
             We are proud to say that we have reliable and experienced drivers
             who ensure your product is delivered safely and professionally. We
-            at AZ UNITED INC Transport hold a proactive approach when it comes to safety
-            and maintain a strict policy to provide the excellent service our
-            customers have come to expect and trust. You can rest assured your
-            product will be delivered in a safe and timely manner.
+            at AZ UNITED INC Transport hold a proactive approach when it comes
+            to safety and maintain a strict policy to provide the excellent
+            service our customers have come to expect and trust. You can rest
+            assured your product will be delivered in a safe and timely manner.
           </p>
+
+{/* Contact Information */}
+          <div className="contact-details">
+            <p>
+              <IoMail />
+              <strong>Email: </strong>{" "}
+              <a href="mailto:azunitedinc@hotmail.com">
+                azunitedinc@hotmail.com
+              </a>
+            </p>
+            <p>
+              <IoLocationSharp />
+              <strong>Address: </strong>{" "}
+              8780 Boylan PI Pendleton Indiana 46064
+            </p>
+            <p>
+              <FaPhone />
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+13173006474">+13173006474</a>
+            </p>
+          </div>
+          
         </div>
 
         {/* Right Side - Form */}
@@ -79,7 +104,9 @@ const GetQuote = () => {
               Message:
               <textarea name="message" rows="4"></textarea>
             </label>
-            <button type="submit" value="Send">Request Quote</button>
+            <button type="submit" value="Send">
+              Request Quote
+            </button>
           </form>
         </div>
       </div>
@@ -88,7 +115,7 @@ const GetQuote = () => {
       {isModalVisible && (
         <div className="modal-overlay">
           <div className="modal-content">
-            {formStatus === 'SUCCESS' ? (
+            {formStatus === "SUCCESS" ? (
               <div>
                 <h3>Success!</h3>
                 <p>Your request has been submitted successfully!</p>
@@ -96,7 +123,9 @@ const GetQuote = () => {
             ) : (
               <div>
                 <h3>Error!</h3>
-                <p>There was an error submitting your request. Please try again.</p>
+                <p>
+                  There was an error submitting your request. Please try again.
+                </p>
               </div>
             )}
             <button onClick={closeModal}>Close</button>

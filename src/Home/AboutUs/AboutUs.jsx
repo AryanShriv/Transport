@@ -5,8 +5,9 @@ import About from "../../Assets/AboutUs/About.jpg";
 import { Slide } from "react-awesome-reveal";
 
 import { IoMail } from "react-icons/io5";
-import { MdPlace } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
+
 
 const AboutUs = () => {
   return (
@@ -36,6 +37,11 @@ const AboutUs = () => {
               <a href="mailto:azunitedinc@hotmail.com">
                 azunitedinc@hotmail.com
               </a>
+            </p>
+            <p>
+              <IoLocationSharp />
+              <strong>Address: </strong>{" "}
+              8780 Boylan PI Pendleton Indiana 46064
             </p>
             <p>
               <FaPhone />
